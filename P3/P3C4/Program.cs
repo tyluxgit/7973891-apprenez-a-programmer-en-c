@@ -1,7 +1,21 @@
-﻿// TODO : créer deux méthodes
+﻿using P3C4;
 
+class Program
+{
+    public static void Main()
+    {
+        Addition();
+        Substraction();   
+    }
+    public static void Addition()
+    {
+        Console.WriteLine("5+6=" + MathMagiques.Somme(5, 6));
+        Test.TestSomme();
+    }
 
-// TODO : afficher le resultat de ces deux méthodes ici
-
-
-// TODO : exécuter les méthodes de test pour les deux méthodes de la classe Program.cs
+    public static void Substraction()
+    {
+        Console.WriteLine("10-8=" + MathMagiques.Soustraction(10, 8));
+        Test.TestSoustraction();
+    }
+}
