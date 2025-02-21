@@ -1,17 +1,22 @@
-﻿Console.WriteLine("Essayons une addition !");
-int x = 1;
-int y = 2;
-int z = x + y;
-Console.WriteLine("La somme est de " + z);
+﻿using P3C3; 
 
-Console.WriteLine("Essayons une addition !");
-int i = 3;
-int j = 4;
-int k = i + j;
-Console.WriteLine("La somme est de " + k);
+class Program
+{
+    static void Main()
+    {
+        Dictionary<int, int> toAdd = new Dictionary<int, int>()
+        {
+            {1,2},
+            {3,4},
+            {5,6}
+        };
+        foreach (KeyValuePair<int, int> pair in toAdd)
+        {
+            Addition addition = new Addition();
+            int result = addition.Add(pair.Key, pair.Value);
+            System.Console.WriteLine("La somme de " + pair.Key + "+" + pair.Value + "=" + result);
+        }
+        
+    }
+}
 
-Console.WriteLine("Essayons une addition !");
-int var1 = 5;
-int var2 = 6;
-int var3 = var1 + var2;
-Console.WriteLine("La somme est de " + var3);
