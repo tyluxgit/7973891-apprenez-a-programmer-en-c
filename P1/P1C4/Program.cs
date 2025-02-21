@@ -5,6 +5,6 @@ var monLivre = new Livre() { Titre = "Le Problème à trois corps", Auteur = "Li
 
 
 // Afficher le contenu des champs de cet objet 
-Console.WriteLine("Le titre du livre est " + monLivre.Titre);
+Console.WriteLine("Le titre du livre est : " + monLivre.Titre);
 Console.WriteLine("Son auteur est " + monLivre.Auteur);
-Console.WriteLine("Il compte " + monLivre.NombreDePages);
+Console.WriteLine("Il compte " + monLivre.NombreDePages + " pages !");
