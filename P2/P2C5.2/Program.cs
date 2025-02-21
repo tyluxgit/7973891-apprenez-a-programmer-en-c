@@ -1,5 +1,6 @@
 ﻿// Définir l'URL à laquelle se connecter
 using System.Net;
+using P2C5_DonneeUtilisateur;
 
 string chaineUrl = DonneeUtilisateur.DemanderUneUrl();
 
