@@ -7,7 +7,7 @@ public class Animal
 
     public void Incrementer()
     {
-        Animal.total += 1;
+        this.total += 1;
     }
 
     public static void AfficherNom()
