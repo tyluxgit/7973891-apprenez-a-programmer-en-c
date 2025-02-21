@@ -8,7 +8,7 @@ using P2C2._1;
 /// </summary>
 /// <remarks>Créé par l'équipe éducative d'OpenClassrooms</remarks>
 
-if (args.Count() == 1)
+if (args.Length == 1)
 {
     BonjourConditionel.DireBonjour(args[0]);
 }
