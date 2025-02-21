@@ -21,7 +21,5 @@ class Program
 
         //TODO: L'utilisateur doit saisir une option du menu (majuscule ou minuscule) et appuyer sur Entrée, le programme doit afficher un message d'erreur si l'option n'est pas valide
 
-        //TODO: Permettre à l'utilisateur de modifier ses informations
-
     }
 }
