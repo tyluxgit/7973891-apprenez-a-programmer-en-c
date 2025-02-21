@@ -1,9 +1,10 @@
-﻿namespace P2C2._2;
-
-public enum Couleur
+﻿namespace P2C2._2
 {
-    Bleu, 
-    Vert,
-    Rouge,
-    Jaune
+    public enum Couleur
+    {
+        Bleu, 
+        Vert,
+        Rouge,
+        Jaune
+    }
 }
