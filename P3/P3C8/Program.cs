@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        // TODO: L'utilisateur doit appuyer sur Entrée pour afficher le menu
+        // TODO: L'utilisateur doit appuyer sur Entrée pour continuer
+
+        // TODO: L'utilisateur doit saisir un identifiant de compte pour afficher le menu
 
         /* TODO: Afficher un menu avec un message et les options suivantes: 
          Veuillez sélectionner une option ci-dessous :
