@@ -1,4 +1,4 @@
-﻿using P3C3; 
+﻿using P3C3;
 
 class Program
 {
@@ -16,7 +16,7 @@ class Program
             int result = addition.Add(pair.Key, pair.Value);
             System.Console.WriteLine("La somme de " + pair.Key + "+" + pair.Value + "=" + result);
         }
-        
+
     }
 }
 
