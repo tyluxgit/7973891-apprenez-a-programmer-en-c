@@ -1,4 +1,4 @@
-﻿
+﻿using Account_def;
 using System.Text;
 
 class Program
@@ -6,6 +6,7 @@ class Program
     static void Main()
     {
         // TODO: L'utilisateur doit appuyer sur Entrée pour continuer
+        
         Console.WriteLine("Appuyez sur Entrée pour continuer...");
         Console.ReadLine();
 
@@ -29,7 +30,7 @@ class Program
             {
                 case "I":
                     Console.WriteLine("Voir les informations sur le titulaire du compte");
-                    Console.WriteLine("AccountHolder.AccountHolderInfo()");
+                    AccountHolder.AccountHolderInfo(); Console.ReadKey(true);
                     break;
                 case "CS":
                     Console.WriteLine("Compte courant - Consulter le solde");
