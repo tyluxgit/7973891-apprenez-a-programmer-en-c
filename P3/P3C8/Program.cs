@@ -40,7 +40,7 @@ class Program
                     break;
                 case "CR":
                     Console.WriteLine("Compte courant - Retirer des fonds");
-                    Console.WriteLine("Veuillez saisir le montant à retirer :");
+                    Console.WriteLine($"Veuillez saisir le montant à retirer (Max:{defaultAccountHolder.CheckingBalance:C2})");
                     double amountCR = Convert.ToDouble(Console.ReadLine());
                     defaultAccountHolder.WithdrawCheckingAccount(amountCR); Tools.WaitingUser();
                     break;
@@ -56,9 +56,9 @@ class Program
                     break;
                 case "ER":
                     Console.WriteLine("Compte épargne - Retirer des fonds");
-                    Console.WriteLine("Veuillez saisir le montant à retirer :");
+                    Console.WriteLine($"Veuillez saisir le montant à retirer (Max:{defaultAccountHolder.SavingBalance:C2})");
                     double amountER = Convert.ToDouble(Console.ReadLine());
-                    defaultAccountHolder.WithdrawSavingAccount(amountER); Tools.WaitingUser();
+                    defaultAccountHolder.WithdrawSavingAccount(amountER);Tools.WaitingUser();
                     break;
                 case "X":
                     Console.WriteLine("Quitter");
