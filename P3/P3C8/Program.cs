@@ -1,9 +1,5 @@
-﻿using System;
-using System.Globalization;
-using System.IO;
-using System.Text.Json;
-using P3C8.Models;
-
+﻿
+using System.Text;
 
 class Program
 {
@@ -12,34 +8,56 @@ class Program
         // TODO: L'utilisateur doit appuyer sur Entrée pour continuer
         Console.WriteLine("Appuyez sur Entrée pour continuer...");
         Console.ReadLine();
-        Console.WriteLine("Saisissez votre identifiant puis Entrée");
-        string identifiant = Console.ReadLine();
 
-        if (int.TryParse(identifiant, out int idRecherche))
+        string choix = "";
+
+
+        while (choix != "X")
         {
-            AccountHolder clientData = LireClientParId("FichierClientFictifs.json", idRecherche);
+            Console.WriteLine("Veuillez sélectionner une option ci - dessous :");
+            Console.WriteLine("[I] Voir les informations sur le titulaire du compte");
+            Console.WriteLine("[CS] Compte courant - Consulter le solde");
+            Console.WriteLine("[CD] Compte courant - Déposer des fonds");
+            Console.WriteLine("[CR] Compte courant - Retirer des fonds");
+            Console.WriteLine("[ES] Compte épargne - Consulter le solde");
+            Console.WriteLine("[ED] Compte épargne - Déposer des fonds");
+            Console.WriteLine("[ER] Compte épargne - Retirer des fonds");
+            Console.WriteLine("[X] Quitter");
 
-            if (clientData != null)
+            choix = Console.ReadLine().ToUpper();
+            switch (choix)
             {
-                /* TODO: Afficher un menu avec un message et les options suivantes: 
-                     Veuillez sélectionner une option ci-dessous :
-                    [I] Voir les informations sur le titulaire du compte
-                    [CS] Compte courant - Consulter le solde
-                    [CD] Compte courant - Déposer des fonds
-                    [CR] Compte courant - Retirer des fonds
-                    [ES] Compte épargne - Consulter le solde
-                    [ED] Compte épargne - Déposer des fonds
-                    [ER] Compte épargne - Retirer des fonds
-                    [X] Quitter*/
-
-                //TODO: L'utilisateur doit saisir une option du menu (majuscule ou minuscule) et appuyer sur Entrée, le programme doit afficher un message d'erreur si l'option n'est pas valide
+                case "I":
+                    Console.WriteLine("Voir les informations sur le titulaire du compte");
+                    Console.WriteLine("AccountHolder.AccountHolderInfo()");
+                    break;
+                case "CS":
+                    Console.WriteLine("Compte courant - Consulter le solde");
+                    break;
+                case "CD":
+                    Console.WriteLine("Compte courant - Déposer des fonds");
+                    break;
+                case "CR":
+                    Console.WriteLine("Compte courant - Retirer des fonds");
+                    break;
+                case "ES":
+                    Console.WriteLine("Compte épargne - Consulter le solde");
+                    break;
+                case "ED":
+                    Console.WriteLine("Compte épargne - Déposer des fonds");
+                    break;
+                case "ER":
+                    Console.WriteLine("Compte épargne - Retirer des fonds");
+                    break;
+                case "X":
+                    Console.WriteLine("Quitter");
+                    break;
+                default:
+                    Console.WriteLine("Option invalide");
+                    break;
             }
-
         }
-        else
-        {
-            Console.WriteLine("L'identifiant doit être un nombre entier.");
 
-        }
+     
     }
 }
