@@ -11,7 +11,6 @@ namespace P3C8.Definitions
         }
     }
 
-    // 
     public class Transaction
     {
         public DateTime Date { get; private set; }
@@ -42,10 +41,10 @@ namespace P3C8.Definitions
         }
         public static bool TryParseDecimal(string input, out decimal result)
         {
-            // Remplacer les espaces par des virgules pour les séparateurs de milliers
+            // Remplacer les espaces et les virgules par des points
             input = input.Replace(" ", "").Replace(",", ".");
 
-            // 
+            // Analyser la chaîne normalisée en un nombre décimal
             return decimal.TryParse(
                 input,
                 NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands,

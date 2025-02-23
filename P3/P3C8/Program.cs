@@ -5,14 +5,18 @@ class Program
 {
     static void Main()
     {
+        // Définir l'encodage de la console
         Console.InputEncoding = Encoding.UTF8;
         Console.OutputEncoding = Encoding.UTF8;
 
+        // Attendre que l'utilisateur appuie sur Entrée
         Tools.WaitingUser();
 
+        // Créer un compte par défaut
         Account defaultAccountHolder = new("John Doe", 123456, 500m, 2000m);
 
-        string filePath = @"C:\temp\output.txt"; // Demander à l'utilisateur ou utiliser un fichier de configuration
+        // Chemin du fichier de sortie pour les transactions
+        string filePath = @"C:\temp\output.json"; 
 
         while (true)
         {
