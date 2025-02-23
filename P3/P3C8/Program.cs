@@ -1,17 +1,11 @@
-﻿using Account_def;
-using System.Text;
+﻿using P3C8;
 
 class Program
 {
     static void Main()
     {
-        // TODO: L'utilisateur doit appuyer sur Entrée pour continuer
-        
-        Console.WriteLine("Appuyez sur Entrée pour continuer...");
-        Console.ReadLine();
-
+        Tools.WaitingUser();
         string choix = "";
-
 
         while (choix != "X")
         {
@@ -30,7 +24,7 @@ class Program
             {
                 case "I":
                     Console.WriteLine("Voir les informations sur le titulaire du compte");
-                    AccountHolder.AccountHolderInfo(); Console.ReadKey(true);
+                    AccountHolder.AccountHolderInfo(); Tools.WaitingUser();
                     break;
                 case "CS":
                     Console.WriteLine("Compte courant - Consulter le solde");

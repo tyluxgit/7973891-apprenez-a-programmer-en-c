@@ -1,5 +1,5 @@
-﻿namespace Account_def
-{
+﻿namespace P3C8;
+
     public class AccountHolder(string name, int accountid)
     {
         public string Name { get; set; } = name;
@@ -17,4 +17,3 @@
         {
         }
     }
-}
