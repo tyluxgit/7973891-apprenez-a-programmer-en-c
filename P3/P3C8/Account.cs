@@ -55,20 +55,20 @@ public class Account(string name, int accountid, double checkingbalance, double 
     }
     public void WithdrawSavingAccount(double amount)
     {
-        if (CheckingBalance - amount < 0)
+        if (SavingBalance - amount < 0)
         {
             Console.WriteLine("Fonds insuffisants");
         }
         else
         {
-            CheckingBalance -= amount;
-            Console.WriteLine($"Retrait de {amount:C2} sur le compte courant effectué avec succès");
+            SavingBalance -= amount;
+            Console.WriteLine($"Retrait de {amount:C2} sur le compte d'épargne effectué avec succès");
             RecordTransaction("Epargne", "Retrait", amount);
         }
     }
     public void RecordTransaction(string accountType, string transactionType, double amount)
     {
-        Transaction transaction = new Transaction(accountType, transactionType, amount);
+        Transaction transaction = new(accountType, transactionType, amount);
         Transactions.Add(transaction);
         Console.WriteLine($"Transaction enregistrée : {accountType} - {transactionType} de {amount:C2}");
     }
@@ -80,5 +80,18 @@ public class Account(string name, int accountid, double checkingbalance, double 
             Console.WriteLine($"{transaction.Date} - {transaction.AccountType} - {transaction.TransactionType}: {transaction.Amount:C2}");
         }
     }
+    public void PrintTransactionsToFile(string filePath)
+    {
+        using (StreamWriter writer = new(filePath))
+        {
+            writer.WriteLine("Date\tType de compte\tType de transaction\tMontant");
+            foreach (var transaction in Transactions)
+            {
+                writer.WriteLine($"{transaction.Date}\t{transaction.AccountType}\t{transaction.TransactionType}\t{transaction.Amount:C2}");
+            }
+        }
+        Console.WriteLine($"Transactions imprimées dans le fichier : {filePath}");
+    }
+
 
 }

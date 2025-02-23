@@ -8,7 +8,7 @@ Console.OutputEncoding = Encoding.UTF8;
 Tools.WaitingUser();
 string choix = "";
 // Création d'un compte par défaut
-Account defaultAccountHolder = new Account("John Doe", 123456, 500, 2000);
+Account defaultAccountHolder = new("John Doe", 123456, 500, 2000);
 
 while (choix != "X")
 {
@@ -64,6 +64,7 @@ while (choix != "X")
         case "X":
             Console.WriteLine("Quitter");
             defaultAccountHolder.DisplayTransactionHistory();
+            defaultAccountHolder.PrintTransactionsToFile(@"C:\temp\output.txt");
             break;
         default:
             Console.WriteLine("Option invalide");

@@ -8,21 +8,13 @@ public class Tools
         Console.ReadLine();
     }
 }
-    public class Transaction
-    {
-        public DateTime Date { get; set; }
-        public string AccountType { get; set; }
-        public string TransactionType { get; set; }
-        public double Amount { get; set; }
-
-        public Transaction(string accountType, string transactionType, double amount)
-        {
-            Date = DateTime.Now;
-            AccountType = accountType;
-            TransactionType = transactionType;
-            Amount = amount;
-        }
-    }
+    public class Transaction(string accountType, string transactionType, double amount)
+{
+    public DateTime Date { get; set; } = DateTime.Now;
+    public string AccountType { get; set; } = accountType;
+    public string TransactionType { get; set; } = transactionType;
+    public double Amount { get; set; } = amount;
+}
 
 
 
